@@ -1,0 +1,74 @@
+:root {
+  /* colors */
+  --brown: #1f1009;
+  --green: #d3f1d6;
+  --gray: #868786;
+}
+
+html {
+  /* set 1rem to 10px instead of native 16px to make it easier to calculate font-size values for the rest of the page (e.g. 1.6rem is 16px, 2.0rem is 20px, etc.) */
+  font-size: 62.5%;
+}
+
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 1.75rem;
+  line-height: 1.5; 
+  background-color: var(--green)
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+header {
+  background-color: var(--brown);
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+
+header a{
+  color: var(--green);
+  text-decoration: none;
+  flex: 1 0 100%;
+}
+
+a:hover {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+.row li{
+  display: inline;
+  margin: 0 3rem;
+}
+
+
+.title {
+  background-color: var(--green);
+  text-align: center;
+  width: 400px;
+  height: 70px;
+  align-content: center;
+  box-shadow: 10px 10px var(--gray);
+  padding: .5rem 3rem;
+  margin-top: 2.5rem;
+  position: relative;
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+/* when screen is small center row .li */
