@@ -1,0 +1,1 @@
+//if user is logged in, and the dashboard button is clicked, replace main with dashboard.
