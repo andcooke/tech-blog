@@ -14,15 +14,15 @@ router.get('/', async (req, res) => {
         },
       ],
     });
-    res.status(200).json(postData);
+    // res.status(200).json(postData);
     // // Serialize data so the template can read it
-    // const posts = postData.map((post) => post.get({ plain: true }));
+    const posts = postData.map((post) => post.get({ plain: true }));
 
-    // // Pass serialized data and session flag into template
-    // res.render('all-posts', { 
-    //   posts, 
-    //   // logged_in: req.session.logged_in *TO-DO*
-    // });
+    // Pass serialized data and session flag into template
+    res.render('all-posts-admin', { 
+      posts, 
+      logged_in: req.session.logged_in 
+    });
   } catch (err) {
     res.status(500).json(err);
   }
@@ -46,14 +46,14 @@ router.get('/:id', async (req, res) => {
       return;
     }
 
-    res.status(200).json(postData);
+    // res.status(200).json(postData);
 
-    // const post = postData.get({ plain: true });
+    const post = postData.get({ plain: true });
 
-    // res.render('single-post', {
-    //   ...post, /* TO-DO */
-    //   logged_in: req.session.logged_in
-    // });
+    res.render('single-post', {
+      ...post,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
