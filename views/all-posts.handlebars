@@ -1,1 +1,8 @@
 {{!-- admin + post body --}}
+  {{#if posts.length}}
+<div>
+    {{#each posts as |post|}}
+    {{post.body}}
+    {{/each}}
+</div>
+  {{/if}}
