@@ -42,7 +42,7 @@ router.delete('/:id', withAuth, async(req, res) => {
     });
 
     if (!postData) {
-      res.status(404).json({ message: 'No post with that id! '})
+      res.status(404).json({ message: 'Tying to delete a post -- No post with that id! '})
       return;
     }
 
