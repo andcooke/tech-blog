@@ -106,5 +106,12 @@ a:hover {
   padding: 1rem;
   margin-top: 3rem;
 }
+
+#signup-button {
+  width: 100%;
+  font-size: 3rem;
+  padding: 1rem;
+  margin-top: 3rem;
+}
 /* media queries */
 /* when screen is small center row .li */
