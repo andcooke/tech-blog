@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Tech Blog</title>
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <header>
+      <nav>
+        <ul class = "row">
+          <li><a href="/">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/" id="logout">Logout</a></li>
+        </ul>
+      </nav>
+      <div class="title">
+        <h1>Dashboard</h1>
+      </div>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        <!-- {{#if logged_in}} -->
+        <!-- <a href="/profile">profile</a> | -->
+        <!-- <button class="no-button" id="logout">logout</button> -->
+        <!-- {{else}} -->
+        <!-- <a href="/login">login</a> -->
+        <!-- {{/if}} -->
+      </nav>
+    </header>
+
+    <main class="container-fluid m-5">
+      <!-- Render the sub layout -->
+    {{{ body }}}
+    </main>
+    <footer>
+
+
+      {{!-- make a new post stuff  --}}
+
+
+    </footer>
+
+  <!-- Render script for logged in users only -->
+
+<script src="/js/logout.js"></script>
+</body>
+
+</html>

@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
     const posts = postData.map((post) => post.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('all-posts-admin', { 
+    res.render('all-posts', { 
       posts, 
       logged_in: req.session.logged_in 
     });
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/:id', async (req, res) => {
+router.get('/post/:id', async (req, res) => {
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -59,8 +59,17 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/');
+    return;
+  }
 
-router.get('/api/users/login', (req, res) => { /* TO-DO why won't this work without api/users/ */
+  res.render('signup');
+})
+
+
+router.get('/login', (req, res) => { /* TO-DO why won't this work without api/users/ */
   // If the user is already logged in, redirect the request to another route
   if (req.session.logged_in) {
     res.redirect('/');
