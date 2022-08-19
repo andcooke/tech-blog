@@ -25,8 +25,51 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-//single post to edit
+router.get('/edit/:id', withAuth, async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id)
+    if (!postData) {
+      res.status(404).json({message: 'Could not find that post'})
+    }
 
-//edit post
+    const post = postData.get({ plain: true });
+
+    res.render('edit-post', {
+      layout: 'dashboard',
+      ...post,
+    });
+  } catch (err) {
+    res.redirect('/login')
+  }
+})
+
+// edit post
+// router.put('/:id', withAuth, async (req, res) => {
+//   try {
+//     const postData = await Post.update(
+//     {
+//       title: req.body.title,
+//       body: req.body.body,
+//     },
+//     {
+//       where: {
+//         id: req.params.id,
+//       },
+//     }
+//     )
+
+//     if (!postData) {
+//       res.status(404).json({message: 'Could not find that post'})
+//     }
+
+//     const post = postData.get({ plain: true });
+
+//     res.render('all-posts-admin', {
+//       ...post
+//     });
+//   } catch (err) {
+//     res.redirect('/login')
+//   }
+// })
 
 module.exports = router;
