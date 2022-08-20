@@ -59,6 +59,7 @@ router.get('/post/:id', async (req, res) => {
   }
 });
 
+
 router.get('/signup', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -69,13 +70,11 @@ router.get('/signup', (req, res) => {
 })
 
 
-router.get('/login', (req, res) => { /* TO-DO why won't this work without api/users/ */
-  // If the user is already logged in, redirect the request to another route
+router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 

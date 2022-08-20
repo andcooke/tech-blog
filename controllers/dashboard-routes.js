@@ -43,6 +43,16 @@ router.get('/edit/:id', withAuth, async (req, res) => {
   }
 })
 
+router.get('/create', (req, res) => {
+  if (req.session.logged_in) {
+    res.render('new-post', {
+      layout: 'dashboard'
+    });
+  } else {
+    res.render('login');
+  }
+})
+
 // edit post
 // router.put('/:id', withAuth, async (req, res) => {
 //   try {
