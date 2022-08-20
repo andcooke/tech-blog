@@ -9,7 +9,19 @@ router.get('/', withAuth, async (req, res) => {
   try {
     // Get all posts and JOIN with user data
     // res.status(200).json(postData)
-    const postData = await Post.findAll({ where: {user_id: req.session.user_id}});
+    const postData = await Post.findAll(
+      { 
+        where: {user_id: req.session.user_id}
+      },
+      {
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+        ],
+      }
+    );
     // res.status(200).json(postData);
     // // Serialize data so the template can read it
     const posts = postData.map((post) => post.get({ plain: true }));
