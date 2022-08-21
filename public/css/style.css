@@ -132,6 +132,42 @@ a:hover {
   cursor: pointer;
 }
 
+.comment-button {
+  background-color: var(--brown);
+  color: white;
+  font-size: 3rem;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+#create-post-button,
+#update-post-button,
+#delete-post-button,
+#login-button,
+#signup-button {
+  background-color: var(--brown);
+  color: white;
+  font-size: 3rem;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 3rem;
+  cursor: pointer;
+}
+
+#create-post-button:hover,
+#update-post-button:hover,
+#delete-post-button:hover,
+#login-button:hover,
+#signup-button:hover  {
+  background-color: var(--gray)
+}
+
+.admin-post {
+  border-radius: 15px;
+}
+
 .bottom {
   position: absolute;
   width: 100%;
@@ -144,5 +180,3 @@ a:hover {
   padding: 1rem;
   margin-top: 3rem;
 }
-/* media queries */
-/* when screen is small center row .li */
