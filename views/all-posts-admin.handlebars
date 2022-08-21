@@ -3,12 +3,12 @@
   <div class="post">
     <div class="post-header">
       <span>
-        <a href="/{{post.id}}">
+        <a href="/dashboard/edit/{{post.id}}">
           <h2 class="text-left" id="post-title">{{post.title}}</h2>
         </a>
       </span>
       <span>
-      <p class="text-right" id="post-info">Posted by {{post.user.username}} on {{format_date post.date_created}}</p>
+      <p class="text-right" id="post-info">{{format_date post.date_created}}</p>
       </span>
     </div>
     <div class = "post-body">

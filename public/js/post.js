@@ -20,3 +20,4 @@ const createPostHandler = async (event) => {
 document
   .querySelector("#create-post-button")
   .addEventListener('click', createPostHandler);
+

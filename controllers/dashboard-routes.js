@@ -48,7 +48,7 @@ router.get('/edit/:id', withAuth, async (req, res) => {
 
     res.render('edit-post', {
       layout: 'dashboard',
-      ...post,
+      post,
     });
   } catch (err) {
     res.redirect('/login')
