@@ -33,7 +33,7 @@
   
   ## Contributors
   
-  [Andrew Cooke](https://github.com/andcooke)
+  [Andrew Cooke](https://github.com/andcooke) <BR>
   [Meg Meyers](https://github.com/femke77)
   
   ## Tests
