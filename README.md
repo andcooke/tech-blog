@@ -34,6 +34,7 @@
   ## Contributors
   
   [Andrew Cooke](https://github.com/andcooke)
+  [Meg Meyers](https://github.com/femke77)
   
   ## Tests
   
